@@ -1,0 +1,13 @@
+Intersection,Timestamp,Vehicle Count,Pedestrian Count,Signal Status,Camera Status,Comments
+A,2023-08-01 08:00,12,5,Green,Online,
+A,2023-08-01 08:05,15,3,Yellow,Online,
+A,2023-08-01 08:10,18,2,Red,Offline,Camera offline, data may be inaccurate
+B,2023-08-01 08:00,20,10,Green,Online,
+B,2023-08-01 08:05,22,12,Yellow,Online,
+B,2023-08-01 08:10,25,15,Red,Online,Ignore this row for analysis
+C,2023-08-01 08:00,30,8,Green,Online,
+C,2023-08-01 08:05,28,9,Yellow,Online,
+C,2023-08-01 08:10,35,7,Red,Online,
+D,2023-08-01 08:00,40,20,Green,Online,
+D,2023-08-01 08:05,42,18,Yellow,Online,
+D,2023-08-01 08:10,45,22,Red,Online,Data corrupted - exclude
