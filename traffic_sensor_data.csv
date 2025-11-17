@@ -1,13 +1,501 @@
-Intersection,Timestamp,Vehicle Count,Pedestrian Count,Signal Status,Camera Status,Comments
-A,2023-08-01 08:00,12,5,Green,Online,
-A,2023-08-01 08:05,15,3,Yellow,Online,
-A,2023-08-01 08:10,18,2,Red,Offline,Camera offline, data may be inaccurate
-B,2023-08-01 08:00,20,10,Green,Online,
-B,2023-08-01 08:05,22,12,Yellow,Online,
-B,2023-08-01 08:10,25,15,Red,Online,Ignore this row for analysis
-C,2023-08-01 08:00,30,8,Green,Online,
-C,2023-08-01 08:05,28,9,Yellow,Online,
-C,2023-08-01 08:10,35,7,Red,Online,
-D,2023-08-01 08:00,40,20,Green,Online,
-D,2023-08-01 08:05,42,18,Yellow,Online,
-D,2023-08-01 08:10,45,22,Red,Online,Data corrupted - exclude
+Intersection ID,Timestamp,Signal Status,Vehicle Count,Pedestrian Count,Camera Status,Comments
+INT001,2023-01-01 06:00:00,Green,8,14,Malfunctioning,
+INT004,2023-01-01 06:05:00,Yellow,44,16,Malfunctioning,Data corrupted - exclude
+INT002,2023-01-01 06:10:00,Red,22,13,Malfunctioning,
+INT004,2023-01-01 06:15:00,Yellow,40,8,Malfunctioning,
+INT004,2023-01-01 06:20:00,Red,12,17,Malfunctioning,"Camera offline, data may be inaccurate"
+INT002,2023-01-01 06:25:00,Red,31,10,Active,Sensor glitch detected
+INT002,2023-01-01 06:30:00,Yellow,41,9,Malfunctioning,Data corrupted - exclude
+INT004,2023-01-01 06:35:00,Yellow,5,15,Inactive,Duplicate entry - verify
+INT004,2023-01-01 06:40:00,Yellow,26,8,Inactive,
+INT001,2023-01-01 06:45:00,Red,36,17,Inactive,Sensor glitch detected
+INT003,2023-01-01 06:50:00,Yellow,6,2,Active,
+INT003,2023-01-01 06:55:00,Green,9,5,Malfunctioning,
+INT004,2023-01-01 07:00:00,Yellow,2,11,Inactive,
+INT002,2023-01-01 07:05:00,Yellow,16,4,Active,
+INT002,2023-01-01 07:10:00,Red,10,15,Malfunctioning,Pedestrian count unusually high due to event
+INT004,2023-01-01 07:15:00,Yellow,11,8,Active,
+INT003,2023-01-01 07:20:00,Red,42,12,Malfunctioning,Check timestamp anomaly
+INT001,2023-01-01 07:25:00,Red,27,18,Malfunctioning,"Camera offline, data may be inaccurate"
+INT004,2023-01-01 07:30:00,Red,14,12,Inactive,
+INT002,2023-01-01 07:35:00,Green,25,2,Inactive,Pedestrian count unusually high due to event
+INT004,2023-01-01 07:40:00,Green,20,10,Inactive,
+INT004,2023-01-01 07:45:00,Green,0,9,Active,Ignore this row for analysis
+INT004,2023-01-01 07:50:00,Yellow,35,18,Inactive,Manual override in effect
+INT002,2023-01-01 07:55:00,Green,13,16,Active,Sensor glitch detected
+INT003,2023-01-01 08:00:00,Green,42,15,Inactive,
+INT004,2023-01-01 08:05:00,Yellow,2,15,Inactive,
+INT004,2023-01-01 08:10:00,Yellow,19,11,Active,Sensor glitch detected
+INT002,2023-01-01 08:15:00,Red,41,10,Active,"Signal stuck on red, vehicle count unreliable"
+INT001,2023-01-01 08:20:00,Red,18,17,Malfunctioning,Duplicate entry - verify
+INT002,2023-01-01 08:25:00,Yellow,1,17,Inactive,Unusual traffic pattern due to detour
+INT001,2023-01-01 08:30:00,Yellow,50,7,Malfunctioning,Data corrupted - exclude
+INT001,2023-01-01 08:35:00,Yellow,49,1,Active,Data corrupted - exclude
+INT002,2023-01-01 08:40:00,Red,22,8,Inactive,Pedestrian count unusually high due to event
+INT002,2023-01-01 08:45:00,Red,10,4,Active,Manual override in effect
+INT001,2023-01-01 08:50:00,Red,39,11,Malfunctioning,Pedestrian count unusually high due to event
+INT002,2023-01-01 08:55:00,Yellow,22,16,Active,"Signal stuck on red, vehicle count unreliable"
+INT001,2023-01-01 09:00:00,Red,34,13,Active,Unusual traffic pattern due to detour
+INT004,2023-01-01 09:05:00,Red,35,4,Active,
+INT002,2023-01-01 09:10:00,Green,16,18,Active,
+INT004,2023-01-01 09:15:00,Yellow,16,18,Inactive,
+INT003,2023-01-01 09:20:00,Red,16,13,Active,Duplicate entry - verify
+INT001,2023-01-01 09:25:00,Green,47,12,Active,
+INT002,2023-01-01 09:30:00,Red,38,0,Active,
+INT001,2023-01-01 09:35:00,Red,23,12,Malfunctioning,
+INT002,2023-01-01 09:40:00,Red,31,7,Malfunctioning,
+INT003,2023-01-01 09:45:00,Yellow,29,14,Active,Data corrupted - exclude
+INT004,2023-01-01 09:50:00,Yellow,20,14,Malfunctioning,
+INT001,2023-01-01 09:55:00,Red,29,10,Active,"Signal stuck on red, vehicle count unreliable"
+INT003,2023-01-01 10:00:00,Green,17,12,Inactive,
+INT002,2023-01-01 10:05:00,Red,23,9,Active,Manual override in effect
+INT001,2023-01-01 10:10:00,Red,27,10,Active,Ignore this row for analysis
+INT001,2023-01-01 10:15:00,Red,26,0,Inactive,Check timestamp anomaly
+INT004,2023-01-01 10:20:00,Yellow,45,3,Malfunctioning,
+INT002,2023-01-01 10:25:00,Red,22,17,Active,Check timestamp anomaly
+INT004,2023-01-01 10:30:00,Red,15,17,Active,Data corrupted - exclude
+INT004,2023-01-01 10:35:00,Red,0,9,Active,Check timestamp anomaly
+INT004,2023-01-01 10:40:00,Red,27,8,Inactive,"Camera offline, data may be inaccurate"
+INT004,2023-01-01 10:45:00,Yellow,29,6,Inactive,Pedestrian count unusually high due to event
+INT004,2023-01-01 10:50:00,Green,3,8,Inactive,
+INT003,2023-01-01 10:55:00,Yellow,38,11,Malfunctioning,Manual override in effect
+INT003,2023-01-01 11:00:00,Red,15,5,Active,
+INT004,2023-01-01 11:05:00,Red,15,8,Active,
+INT003,2023-01-01 11:10:00,Green,13,1,Malfunctioning,Data corrupted - exclude
+INT003,2023-01-01 11:15:00,Red,0,15,Active,
+INT002,2023-01-01 11:20:00,Red,7,0,Malfunctioning,
+INT002,2023-01-01 11:25:00,Green,45,4,Malfunctioning,Data corrupted - exclude
+INT001,2023-01-01 11:30:00,Yellow,47,14,Malfunctioning,
+INT002,2023-01-01 11:35:00,Red,45,16,Active,Ignore this row for analysis
+INT001,2023-01-01 11:40:00,Red,40,2,Inactive,Duplicate entry - verify
+INT003,2023-01-01 11:45:00,Red,18,16,Active,Manual override in effect
+INT004,2023-01-01 11:50:00,Green,12,12,Active,"Signal stuck on red, vehicle count unreliable"
+INT004,2023-01-01 11:55:00,Green,4,20,Inactive,Duplicate entry - verify
+INT004,2023-01-01 12:00:00,Yellow,17,10,Inactive,
+INT002,2023-01-01 12:05:00,Red,39,17,Inactive,Check timestamp anomaly
+INT003,2023-01-01 12:10:00,Red,42,2,Active,Data corrupted - exclude
+INT002,2023-01-01 12:15:00,Yellow,10,1,Malfunctioning,Data corrupted - exclude
+INT003,2023-01-01 12:20:00,Red,31,8,Inactive,
+INT003,2023-01-01 12:25:00,Green,12,16,Malfunctioning,Check timestamp anomaly
+INT001,2023-01-01 12:30:00,Green,0,2,Inactive,
+INT003,2023-01-01 12:35:00,Yellow,19,15,Active,Unusual traffic pattern due to detour
+INT002,2023-01-01 12:40:00,Red,45,7,Malfunctioning,Ignore this row for analysis
+INT004,2023-01-01 12:45:00,Red,35,12,Active,"Camera offline, data may be inaccurate"
+INT001,2023-01-01 12:50:00,Red,45,4,Active,Duplicate entry - verify
+INT003,2023-01-01 12:55:00,Red,11,20,Active,Data corrupted - exclude
+INT004,2023-01-01 13:00:00,Green,9,2,Inactive,
+INT002,2023-01-01 13:05:00,Red,23,4,Malfunctioning,Manual override in effect
+INT004,2023-01-01 13:10:00,Red,5,13,Malfunctioning,Duplicate entry - verify
+INT001,2023-01-01 13:15:00,Green,13,18,Active,
+INT003,2023-01-01 13:20:00,Green,5,1,Active,Sensor glitch detected
+INT003,2023-01-01 13:25:00,Yellow,3,0,Inactive,
+INT001,2023-01-01 13:30:00,Green,4,6,Malfunctioning,"Signal stuck on red, vehicle count unreliable"
+INT001,2023-01-01 13:35:00,Red,18,2,Active,Check timestamp anomaly
+INT004,2023-01-01 13:40:00,Green,18,19,Inactive,
+INT001,2023-01-01 13:45:00,Red,7,19,Active,"Camera offline, data may be inaccurate"
+INT004,2023-01-01 13:50:00,Green,27,3,Malfunctioning,Pedestrian count unusually high due to event
+INT003,2023-01-01 13:55:00,Red,3,15,Malfunctioning,
+INT002,2023-01-01 14:00:00,Yellow,18,19,Inactive,
+INT003,2023-01-01 14:05:00,Yellow,10,19,Malfunctioning,
+INT003,2023-01-01 14:10:00,Red,2,10,Inactive,Sensor glitch detected
+INT003,2023-01-01 14:15:00,Green,9,20,Inactive,Manual override in effect
+INT004,2023-01-01 14:20:00,Yellow,33,9,Malfunctioning,Ignore this row for analysis
+INT002,2023-01-01 14:25:00,Yellow,8,0,Active,Manual override in effect
+INT002,2023-01-01 14:30:00,Green,7,5,Inactive,"Camera offline, data may be inaccurate"
+INT003,2023-01-01 14:35:00,Green,47,19,Inactive,Ignore this row for analysis
+INT001,2023-01-01 14:40:00,Red,26,18,Malfunctioning,
+INT004,2023-01-01 14:45:00,Green,3,7,Active,Manual override in effect
+INT003,2023-01-01 14:50:00,Green,38,5,Malfunctioning,
+INT004,2023-01-01 14:55:00,Red,25,14,Malfunctioning,
+INT004,2023-01-01 15:00:00,Yellow,32,12,Malfunctioning,
+INT003,2023-01-01 15:05:00,Green,44,9,Inactive,
+INT001,2023-01-01 15:10:00,Green,35,15,Malfunctioning,
+INT003,2023-01-01 15:15:00,Green,9,1,Malfunctioning,Unusual traffic pattern due to detour
+INT001,2023-01-01 15:20:00,Yellow,22,15,Active,"Camera offline, data may be inaccurate"
+INT002,2023-01-01 15:25:00,Red,4,10,Active,"Camera offline, data may be inaccurate"
+INT004,2023-01-01 15:30:00,Red,9,1,Malfunctioning,
+INT002,2023-01-01 15:35:00,Yellow,24,4,Inactive,
+INT002,2023-01-01 15:40:00,Yellow,17,15,Active,
+INT003,2023-01-01 15:45:00,Red,45,5,Malfunctioning,
+INT004,2023-01-01 15:50:00,Green,45,15,Malfunctioning,
+INT003,2023-01-01 15:55:00,Red,7,1,Malfunctioning,Duplicate entry - verify
+INT001,2023-01-01 16:00:00,Green,44,9,Active,"Camera offline, data may be inaccurate"
+INT003,2023-01-01 16:05:00,Red,11,0,Active,
+INT001,2023-01-01 16:10:00,Red,45,7,Active,
+INT004,2023-01-01 16:15:00,Yellow,37,2,Malfunctioning,Unusual traffic pattern due to detour
+INT004,2023-01-01 16:20:00,Red,44,18,Inactive,Check timestamp anomaly
+INT001,2023-01-01 16:25:00,Green,22,6,Inactive,
+INT002,2023-01-01 16:30:00,Red,15,8,Inactive,Data corrupted - exclude
+INT003,2023-01-01 16:35:00,Red,3,14,Inactive,
+INT003,2023-01-01 16:40:00,Red,10,5,Inactive,
+INT001,2023-01-01 16:45:00,Yellow,25,10,Active,Check timestamp anomaly
+INT002,2023-01-01 16:50:00,Green,20,9,Malfunctioning,Pedestrian count unusually high due to event
+INT001,2023-01-01 16:55:00,Yellow,30,6,Inactive,Duplicate entry - verify
+INT004,2023-01-01 17:00:00,Green,31,0,Malfunctioning,Sensor glitch detected
+INT004,2023-01-01 17:05:00,Yellow,50,19,Malfunctioning,"Signal stuck on red, vehicle count unreliable"
+INT002,2023-01-01 17:10:00,Red,49,18,Malfunctioning,"Signal stuck on red, vehicle count unreliable"
+INT001,2023-01-01 17:15:00,Red,8,13,Inactive,Data corrupted - exclude
+INT004,2023-01-01 17:20:00,Green,45,4,Inactive,
+INT002,2023-01-01 17:25:00,Red,15,17,Malfunctioning,Pedestrian count unusually high due to event
+INT002,2023-01-01 17:30:00,Red,12,0,Inactive,
+INT004,2023-01-01 17:35:00,Red,11,14,Inactive,
+INT001,2023-01-01 17:40:00,Green,31,11,Malfunctioning,
+INT001,2023-01-01 17:45:00,Yellow,50,4,Active,
+INT003,2023-01-01 17:50:00,Yellow,14,10,Inactive,Sensor glitch detected
+INT004,2023-01-01 17:55:00,Yellow,19,19,Inactive,Sensor glitch detected
+INT003,2023-01-01 18:00:00,Yellow,8,12,Active,
+INT001,2023-01-01 18:05:00,Green,41,2,Malfunctioning,
+INT002,2023-01-01 18:10:00,Yellow,22,19,Inactive,
+INT004,2023-01-01 18:15:00,Red,19,3,Inactive,Ignore this row for analysis
+INT002,2023-01-01 18:20:00,Red,24,4,Malfunctioning,
+INT004,2023-01-01 18:25:00,Green,35,17,Active,
+INT002,2023-01-01 18:30:00,Red,3,14,Active,"Camera offline, data may be inaccurate"
+INT001,2023-01-01 18:35:00,Yellow,22,0,Inactive,Sensor glitch detected
+INT001,2023-01-01 18:40:00,Red,0,16,Active,"Signal stuck on red, vehicle count unreliable"
+INT002,2023-01-01 18:45:00,Yellow,11,15,Inactive,
+INT004,2023-01-01 18:50:00,Yellow,48,1,Active,
+INT004,2023-01-01 18:55:00,Red,31,10,Inactive,Ignore this row for analysis
+INT001,2023-01-01 19:00:00,Green,38,2,Inactive,Data corrupted - exclude
+INT003,2023-01-01 19:05:00,Yellow,7,2,Inactive,
+INT003,2023-01-01 19:10:00,Green,27,13,Malfunctioning,Data corrupted - exclude
+INT002,2023-01-01 19:15:00,Yellow,19,9,Active,
+INT001,2023-01-01 19:20:00,Yellow,30,14,Active,
+INT002,2023-01-01 19:25:00,Green,7,1,Active,Check timestamp anomaly
+INT002,2023-01-01 19:30:00,Green,47,5,Inactive,
+INT004,2023-01-01 19:35:00,Green,12,20,Active,
+INT002,2023-01-01 19:40:00,Yellow,35,9,Inactive,Sensor glitch detected
+INT001,2023-01-01 19:45:00,Green,10,7,Malfunctioning,
+INT002,2023-01-01 19:50:00,Green,38,6,Malfunctioning,Duplicate entry - verify
+INT003,2023-01-01 19:55:00,Yellow,44,18,Inactive,Data corrupted - exclude
+INT001,2023-01-01 20:00:00,Green,34,3,Malfunctioning,"Camera offline, data may be inaccurate"
+INT001,2023-01-01 20:05:00,Red,25,20,Inactive,
+INT004,2023-01-01 20:10:00,Yellow,41,16,Active,Pedestrian count unusually high due to event
+INT003,2023-01-01 20:15:00,Yellow,36,2,Active,
+INT004,2023-01-01 20:20:00,Yellow,21,8,Active,Check timestamp anomaly
+INT001,2023-01-01 20:25:00,Green,16,18,Inactive,Sensor glitch detected
+INT001,2023-01-01 20:30:00,Red,14,16,Inactive,
+INT004,2023-01-01 20:35:00,Red,15,19,Active,
+INT003,2023-01-01 20:40:00,Green,36,19,Malfunctioning,Pedestrian count unusually high due to event
+INT003,2023-01-01 20:45:00,Green,42,12,Malfunctioning,
+INT002,2023-01-01 20:50:00,Yellow,28,13,Active,"Signal stuck on red, vehicle count unreliable"
+INT004,2023-01-01 20:55:00,Red,5,4,Inactive,Unusual traffic pattern due to detour
+INT003,2023-01-01 21:00:00,Red,38,3,Active,Pedestrian count unusually high due to event
+INT003,2023-01-01 21:05:00,Green,36,8,Active,
+INT001,2023-01-01 21:10:00,Yellow,49,13,Malfunctioning,Duplicate entry - verify
+INT003,2023-01-01 21:15:00,Green,48,20,Active,Unusual traffic pattern due to detour
+INT001,2023-01-01 21:20:00,Green,27,19,Active,"Signal stuck on red, vehicle count unreliable"
+INT004,2023-01-01 21:25:00,Yellow,0,5,Malfunctioning,Unusual traffic pattern due to detour
+INT002,2023-01-01 21:30:00,Green,32,8,Active,Check timestamp anomaly
+INT004,2023-01-01 21:35:00,Red,40,1,Active,Ignore this row for analysis
+INT002,2023-01-01 21:40:00,Yellow,23,8,Active,
+INT003,2023-01-01 21:45:00,Red,37,3,Malfunctioning,Data corrupted - exclude
+INT004,2023-01-01 21:50:00,Yellow,7,19,Active,Data corrupted - exclude
+INT002,2023-01-01 21:55:00,Green,49,12,Active,Unusual traffic pattern due to detour
+INT001,2023-01-01 22:00:00,Yellow,4,4,Inactive,Duplicate entry - verify
+INT001,2023-01-01 22:05:00,Green,3,6,Malfunctioning,
+INT004,2023-01-01 22:10:00,Green,21,2,Active,
+INT001,2023-01-01 22:15:00,Green,2,11,Malfunctioning,
+INT004,2023-01-01 22:20:00,Red,47,9,Active,
+INT003,2023-01-01 22:25:00,Red,15,10,Malfunctioning,
+INT001,2023-01-01 22:30:00,Yellow,34,9,Malfunctioning,
+INT001,2023-01-01 22:35:00,Green,26,3,Malfunctioning,Manual override in effect
+INT001,2023-01-01 22:40:00,Green,7,9,Active,"Signal stuck on red, vehicle count unreliable"
+INT001,2023-01-01 22:45:00,Yellow,39,1,Malfunctioning,Manual override in effect
+INT004,2023-01-01 22:50:00,Green,14,18,Malfunctioning,
+INT003,2023-01-01 22:55:00,Red,14,0,Active,
+INT004,2023-01-01 23:00:00,Yellow,12,13,Malfunctioning,
+INT004,2023-01-01 23:05:00,Green,43,17,Active,
+INT002,2023-01-01 23:10:00,Yellow,33,7,Malfunctioning,Check timestamp anomaly
+INT001,2023-01-01 23:15:00,Yellow,50,2,Inactive,Unusual traffic pattern due to detour
+INT002,2023-01-01 23:20:00,Green,21,3,Inactive,
+INT002,2023-01-01 23:25:00,Green,27,20,Inactive,
+INT004,2023-01-01 23:30:00,Green,41,2,Active,Ignore this row for analysis
+INT003,2023-01-01 23:35:00,Yellow,27,13,Malfunctioning,Pedestrian count unusually high due to event
+INT002,2023-01-01 23:40:00,Green,42,20,Malfunctioning,
+INT003,2023-01-01 23:45:00,Red,22,1,Malfunctioning,
+INT003,2023-01-01 23:50:00,Red,13,15,Malfunctioning,Check timestamp anomaly
+INT001,2023-01-01 23:55:00,Green,48,17,Inactive,Ignore this row for analysis
+INT003,2023-01-02 00:00:00,Red,20,8,Active,
+INT001,2023-01-02 00:05:00,Yellow,8,11,Malfunctioning,
+INT004,2023-01-02 00:10:00,Green,39,17,Inactive,Pedestrian count unusually high due to event
+INT003,2023-01-02 00:15:00,Red,32,5,Malfunctioning,Duplicate entry - verify
+INT003,2023-01-02 00:20:00,Green,5,17,Active,Manual override in effect
+INT003,2023-01-02 00:25:00,Yellow,46,13,Active,Sensor glitch detected
+INT002,2023-01-02 00:30:00,Red,2,14,Active,Ignore this row for analysis
+INT003,2023-01-02 00:35:00,Green,24,1,Inactive,
+INT001,2023-01-02 00:40:00,Red,12,14,Malfunctioning,Duplicate entry - verify
+INT002,2023-01-02 00:45:00,Red,44,3,Malfunctioning,
+INT001,2023-01-02 00:50:00,Green,49,5,Malfunctioning,
+INT001,2023-01-02 00:55:00,Red,10,15,Inactive,
+INT003,2023-01-02 01:00:00,Green,20,2,Active,
+INT004,2023-01-02 01:05:00,Red,48,18,Inactive,Duplicate entry - verify
+INT004,2023-01-02 01:10:00,Green,24,6,Active,
+INT002,2023-01-02 01:15:00,Yellow,48,15,Malfunctioning,Ignore this row for analysis
+INT003,2023-01-02 01:20:00,Yellow,25,10,Malfunctioning,Sensor glitch detected
+INT002,2023-01-02 01:25:00,Green,23,3,Inactive,
+INT002,2023-01-02 01:30:00,Green,3,1,Active,
+INT004,2023-01-02 01:35:00,Yellow,9,14,Active,
+INT002,2023-01-02 01:40:00,Green,24,2,Malfunctioning,Check timestamp anomaly
+INT003,2023-01-02 01:45:00,Yellow,14,15,Inactive,"Camera offline, data may be inaccurate"
+INT003,2023-01-02 01:50:00,Red,12,10,Malfunctioning,Data corrupted - exclude
+INT004,2023-01-02 01:55:00,Yellow,49,19,Malfunctioning,"Camera offline, data may be inaccurate"
+INT003,2023-01-02 02:00:00,Green,10,6,Malfunctioning,Pedestrian count unusually high due to event
+INT001,2023-01-02 02:05:00,Yellow,10,11,Malfunctioning,
+INT003,2023-01-02 02:10:00,Yellow,35,8,Active,"Camera offline, data may be inaccurate"
+INT002,2023-01-02 02:15:00,Red,10,8,Inactive,
+INT002,2023-01-02 02:20:00,Yellow,30,7,Active,Sensor glitch detected
+INT004,2023-01-02 02:25:00,Green,30,17,Active,"Signal stuck on red, vehicle count unreliable"
+INT004,2023-01-02 02:30:00,Green,0,4,Inactive,
+INT001,2023-01-02 02:35:00,Yellow,50,18,Malfunctioning,
+INT002,2023-01-02 02:40:00,Red,13,9,Inactive,Unusual traffic pattern due to detour
+INT004,2023-01-02 02:45:00,Yellow,8,19,Malfunctioning,
+INT004,2023-01-02 02:50:00,Yellow,11,17,Inactive,
+INT001,2023-01-02 02:55:00,Red,49,5,Inactive,Pedestrian count unusually high due to event
+INT001,2023-01-02 03:00:00,Red,1,13,Inactive,
+INT003,2023-01-02 03:05:00,Red,17,17,Inactive,Manual override in effect
+INT003,2023-01-02 03:10:00,Yellow,45,14,Malfunctioning,
+INT002,2023-01-02 03:15:00,Green,24,4,Active,Check timestamp anomaly
+INT003,2023-01-02 03:20:00,Green,39,18,Malfunctioning,Sensor glitch detected
+INT001,2023-01-02 03:25:00,Yellow,32,9,Inactive,Check timestamp anomaly
+INT002,2023-01-02 03:30:00,Green,46,17,Inactive,
+INT003,2023-01-02 03:35:00,Green,4,10,Malfunctioning,
+INT001,2023-01-02 03:40:00,Yellow,15,5,Inactive,
+INT001,2023-01-02 03:45:00,Yellow,50,11,Active,Check timestamp anomaly
+INT004,2023-01-02 03:50:00,Yellow,18,15,Inactive,Ignore this row for analysis
+INT003,2023-01-02 03:55:00,Yellow,5,1,Active,Unusual traffic pattern due to detour
+INT004,2023-01-02 04:00:00,Red,2,8,Malfunctioning,
+INT004,2023-01-02 04:05:00,Red,32,7,Malfunctioning,
+INT004,2023-01-02 04:10:00,Green,32,10,Malfunctioning,
+INT001,2023-01-02 04:15:00,Yellow,12,9,Active,Unusual traffic pattern due to detour
+INT001,2023-01-02 04:20:00,Red,0,1,Inactive,
+INT003,2023-01-02 04:25:00,Green,1,20,Malfunctioning,Pedestrian count unusually high due to event
+INT002,2023-01-02 04:30:00,Green,17,15,Active,
+INT001,2023-01-02 04:35:00,Green,25,19,Malfunctioning,Data corrupted - exclude
+INT003,2023-01-02 04:40:00,Green,4,1,Inactive,
+INT002,2023-01-02 04:45:00,Red,10,1,Inactive,
+INT004,2023-01-02 04:50:00,Green,41,1,Inactive,
+INT004,2023-01-02 04:55:00,Yellow,18,19,Malfunctioning,
+INT002,2023-01-02 05:00:00,Red,25,12,Active,Sensor glitch detected
+INT001,2023-01-02 05:05:00,Green,24,8,Inactive,
+INT002,2023-01-02 05:10:00,Yellow,28,17,Active,Data corrupted - exclude
+INT004,2023-01-02 05:15:00,Green,50,9,Malfunctioning,Ignore this row for analysis
+INT002,2023-01-02 05:20:00,Green,41,7,Malfunctioning,Sensor glitch detected
+INT001,2023-01-02 05:25:00,Red,37,9,Malfunctioning,Check timestamp anomaly
+INT001,2023-01-02 05:30:00,Yellow,46,19,Active,
+INT002,2023-01-02 05:35:00,Red,10,3,Inactive,Sensor glitch detected
+INT004,2023-01-02 05:40:00,Yellow,14,6,Malfunctioning,
+INT003,2023-01-02 05:45:00,Red,17,8,Active,Sensor glitch detected
+INT001,2023-01-02 05:50:00,Yellow,49,4,Inactive,"Camera offline, data may be inaccurate"
+INT004,2023-01-02 05:55:00,Yellow,12,9,Malfunctioning,
+INT004,2023-01-02 06:00:00,Red,4,5,Inactive,
+INT001,2023-01-02 06:05:00,Red,4,5,Active,Ignore this row for analysis
+INT002,2023-01-02 06:10:00,Green,4,12,Inactive,
+INT001,2023-01-02 06:15:00,Green,16,13,Active,
+INT002,2023-01-02 06:20:00,Green,2,0,Active,Check timestamp anomaly
+INT001,2023-01-02 06:25:00,Green,27,1,Inactive,Duplicate entry - verify
+INT001,2023-01-02 06:30:00,Yellow,31,3,Active,Ignore this row for analysis
+INT003,2023-01-02 06:35:00,Yellow,17,0,Active,
+INT004,2023-01-02 06:40:00,Green,40,4,Malfunctioning,Manual override in effect
+INT002,2023-01-02 06:45:00,Red,12,13,Active,Manual override in effect
+INT003,2023-01-02 06:50:00,Yellow,49,1,Active,Unusual traffic pattern due to detour
+INT002,2023-01-02 06:55:00,Yellow,37,3,Active,
+INT003,2023-01-02 07:00:00,Green,34,7,Malfunctioning,
+INT002,2023-01-02 07:05:00,Red,48,15,Active,
+INT001,2023-01-02 07:10:00,Red,1,13,Inactive,
+INT003,2023-01-02 07:15:00,Red,40,11,Inactive,
+INT001,2023-01-02 07:20:00,Green,2,17,Malfunctioning,Unusual traffic pattern due to detour
+INT004,2023-01-02 07:25:00,Yellow,22,2,Active,Unusual traffic pattern due to detour
+INT004,2023-01-02 07:30:00,Yellow,38,0,Malfunctioning,"Camera offline, data may be inaccurate"
+INT001,2023-01-02 07:35:00,Yellow,32,1,Malfunctioning,
+INT003,2023-01-02 07:40:00,Green,17,12,Active,"Signal stuck on red, vehicle count unreliable"
+INT002,2023-01-02 07:45:00,Yellow,18,19,Malfunctioning,"Signal stuck on red, vehicle count unreliable"
+INT002,2023-01-02 07:50:00,Green,4,19,Active,
+INT004,2023-01-02 07:55:00,Green,39,17,Inactive,
+INT003,2023-01-02 08:00:00,Yellow,37,16,Inactive,"Signal stuck on red, vehicle count unreliable"
+INT004,2023-01-02 08:05:00,Yellow,23,16,Inactive,
+INT002,2023-01-02 08:10:00,Red,39,4,Active,
+INT003,2023-01-02 08:15:00,Red,13,18,Malfunctioning,
+INT001,2023-01-02 08:20:00,Green,10,18,Inactive,Unusual traffic pattern due to detour
+INT003,2023-01-02 08:25:00,Red,38,3,Active,Unusual traffic pattern due to detour
+INT004,2023-01-02 08:30:00,Green,44,20,Malfunctioning,Manual override in effect
+INT002,2023-01-02 08:35:00,Yellow,1,10,Inactive,Duplicate entry - verify
+INT003,2023-01-02 08:40:00,Yellow,33,12,Active,
+INT001,2023-01-02 08:45:00,Red,25,16,Malfunctioning,Manual override in effect
+INT002,2023-01-02 08:50:00,Red,43,9,Malfunctioning,
+INT004,2023-01-02 08:55:00,Green,4,3,Malfunctioning,
+INT004,2023-01-02 09:00:00,Yellow,22,4,Malfunctioning,Duplicate entry - verify
+INT004,2023-01-02 09:05:00,Yellow,30,7,Active,Manual override in effect
+INT004,2023-01-02 09:10:00,Green,29,10,Inactive,Sensor glitch detected
+INT004,2023-01-02 09:15:00,Red,1,0,Malfunctioning,"Camera offline, data may be inaccurate"
+INT004,2023-01-02 09:20:00,Red,9,0,Active,"Signal stuck on red, vehicle count unreliable"
+INT003,2023-01-02 09:25:00,Green,39,18,Active,Duplicate entry - verify
+INT001,2023-01-02 09:30:00,Yellow,6,11,Active,
+INT002,2023-01-02 09:35:00,Yellow,30,1,Active,"Camera offline, data may be inaccurate"
+INT002,2023-01-02 09:40:00,Red,37,1,Inactive,Ignore this row for analysis
+INT001,2023-01-02 09:45:00,Green,10,6,Inactive,
+INT002,2023-01-02 09:50:00,Red,4,5,Active,
+INT002,2023-01-02 09:55:00,Yellow,16,19,Malfunctioning,
+INT004,2023-01-02 10:00:00,Green,4,0,Active,Ignore this row for analysis
+INT003,2023-01-02 10:05:00,Red,32,20,Active,Duplicate entry - verify
+INT002,2023-01-02 10:10:00,Red,26,3,Inactive,Duplicate entry - verify
+INT001,2023-01-02 10:15:00,Green,13,3,Inactive,
+INT001,2023-01-02 10:20:00,Green,19,9,Inactive,Unusual traffic pattern due to detour
+INT001,2023-01-02 10:25:00,Green,29,6,Malfunctioning,
+INT002,2023-01-02 10:30:00,Red,27,18,Inactive,
+INT001,2023-01-02 10:35:00,Red,8,20,Malfunctioning,
+INT004,2023-01-02 10:40:00,Green,47,13,Malfunctioning,Check timestamp anomaly
+INT003,2023-01-02 10:45:00,Red,2,18,Inactive,
+INT001,2023-01-02 10:50:00,Yellow,6,10,Malfunctioning,"Camera offline, data may be inaccurate"
+INT004,2023-01-02 10:55:00,Red,4,12,Malfunctioning,
+INT001,2023-01-02 11:00:00,Red,0,7,Active,Ignore this row for analysis
+INT004,2023-01-02 11:05:00,Yellow,14,3,Active,
+INT002,2023-01-02 11:10:00,Green,35,12,Active,Data corrupted - exclude
+INT001,2023-01-02 11:15:00,Yellow,43,13,Malfunctioning,
+INT001,2023-01-02 11:20:00,Red,13,5,Active,
+INT004,2023-01-02 11:25:00,Green,0,12,Active,
+INT003,2023-01-02 11:30:00,Yellow,6,17,Malfunctioning,Sensor glitch detected
+INT002,2023-01-02 11:35:00,Yellow,2,12,Inactive,Sensor glitch detected
+INT002,2023-01-02 11:40:00,Yellow,29,5,Inactive,
+INT003,2023-01-02 11:45:00,Red,24,18,Active,
+INT001,2023-01-02 11:50:00,Yellow,46,12,Active,Duplicate entry - verify
+INT001,2023-01-02 11:55:00,Yellow,18,18,Active,
+INT003,2023-01-02 12:00:00,Red,7,13,Active,
+INT004,2023-01-02 12:05:00,Green,4,19,Active,
+INT004,2023-01-02 12:10:00,Green,25,13,Malfunctioning,Sensor glitch detected
+INT002,2023-01-02 12:15:00,Green,48,0,Active,Unusual traffic pattern due to detour
+INT004,2023-01-02 12:20:00,Yellow,9,3,Malfunctioning,
+INT001,2023-01-02 12:25:00,Red,38,2,Malfunctioning,Data corrupted - exclude
+INT004,2023-01-02 12:30:00,Red,22,16,Malfunctioning,
+INT002,2023-01-02 12:35:00,Red,35,10,Inactive,Ignore this row for analysis
+INT002,2023-01-02 12:40:00,Green,25,6,Malfunctioning,Duplicate entry - verify
+INT002,2023-01-02 12:45:00,Red,50,20,Malfunctioning,Check timestamp anomaly
+INT004,2023-01-02 12:50:00,Green,0,1,Malfunctioning,Unusual traffic pattern due to detour
+INT004,2023-01-02 12:55:00,Yellow,17,14,Active,Unusual traffic pattern due to detour
+INT002,2023-01-02 13:00:00,Green,34,20,Inactive,
+INT003,2023-01-02 13:05:00,Red,48,9,Inactive,
+INT004,2023-01-02 13:10:00,Yellow,28,2,Inactive,Ignore this row for analysis
+INT001,2023-01-02 13:15:00,Green,29,6,Active,"Camera offline, data may be inaccurate"
+INT004,2023-01-02 13:20:00,Green,17,2,Malfunctioning,Check timestamp anomaly
+INT004,2023-01-02 13:25:00,Yellow,29,1,Active,
+INT002,2023-01-02 13:30:00,Yellow,4,2,Active,
+INT001,2023-01-02 13:35:00,Green,18,15,Malfunctioning,Data corrupted - exclude
+INT004,2023-01-02 13:40:00,Red,4,2,Active,
+INT003,2023-01-02 13:45:00,Green,15,19,Active,
+INT004,2023-01-02 13:50:00,Green,41,5,Active,Ignore this row for analysis
+INT001,2023-01-02 13:55:00,Yellow,16,14,Malfunctioning,Pedestrian count unusually high due to event
+INT002,2023-01-02 14:00:00,Red,35,3,Active,
+INT003,2023-01-02 14:05:00,Red,18,20,Malfunctioning,
+INT001,2023-01-02 14:10:00,Yellow,18,16,Malfunctioning,Data corrupted - exclude
+INT004,2023-01-02 14:15:00,Green,46,16,Inactive,Duplicate entry - verify
+INT004,2023-01-02 14:20:00,Green,18,9,Malfunctioning,Duplicate entry - verify
+INT003,2023-01-02 14:25:00,Green,44,19,Malfunctioning,
+INT001,2023-01-02 14:30:00,Green,28,15,Malfunctioning,Ignore this row for analysis
+INT004,2023-01-02 14:35:00,Green,27,16,Active,
+INT001,2023-01-02 14:40:00,Red,2,20,Active,
+INT002,2023-01-02 14:45:00,Yellow,46,17,Active,
+INT001,2023-01-02 14:50:00,Yellow,27,11,Inactive,
+INT001,2023-01-02 14:55:00,Yellow,14,6,Malfunctioning,
+INT001,2023-01-02 15:00:00,Yellow,34,0,Inactive,
+INT003,2023-01-02 15:05:00,Green,4,10,Malfunctioning,
+INT002,2023-01-02 15:10:00,Green,43,18,Malfunctioning,
+INT004,2023-01-02 15:15:00,Red,46,16,Inactive,Ignore this row for analysis
+INT001,2023-01-02 15:20:00,Yellow,37,2,Malfunctioning,Pedestrian count unusually high due to event
+INT004,2023-01-02 15:25:00,Yellow,23,10,Malfunctioning,
+INT001,2023-01-02 15:30:00,Yellow,11,11,Inactive,"Camera offline, data may be inaccurate"
+INT002,2023-01-02 15:35:00,Yellow,28,11,Active,Sensor glitch detected
+INT002,2023-01-02 15:40:00,Yellow,10,19,Active,
+INT004,2023-01-02 15:45:00,Yellow,43,1,Inactive,Ignore this row for analysis
+INT001,2023-01-02 15:50:00,Green,21,6,Malfunctioning,"Camera offline, data may be inaccurate"
+INT003,2023-01-02 15:55:00,Green,50,11,Active,
+INT003,2023-01-02 16:00:00,Green,42,14,Malfunctioning,
+INT002,2023-01-02 16:05:00,Red,9,4,Inactive,Data corrupted - exclude
+INT004,2023-01-02 16:10:00,Red,42,6,Active,"Camera offline, data may be inaccurate"
+INT003,2023-01-02 16:15:00,Red,42,4,Malfunctioning,Data corrupted - exclude
+INT004,2023-01-02 16:20:00,Yellow,1,7,Inactive,Pedestrian count unusually high due to event
+INT004,2023-01-02 16:25:00,Yellow,23,1,Malfunctioning,
+INT001,2023-01-02 16:30:00,Yellow,16,17,Active,
+INT004,2023-01-02 16:35:00,Green,1,14,Malfunctioning,
+INT001,2023-01-02 16:40:00,Yellow,21,10,Malfunctioning,
+INT002,2023-01-02 16:45:00,Yellow,50,9,Malfunctioning,
+INT003,2023-01-02 16:50:00,Red,17,14,Inactive,
+INT001,2023-01-02 16:55:00,Green,35,19,Active,"Signal stuck on red, vehicle count unreliable"
+INT001,2023-01-02 17:00:00,Yellow,1,15,Inactive,
+INT003,2023-01-02 17:05:00,Yellow,9,2,Malfunctioning,
+INT002,2023-01-02 17:10:00,Red,26,19,Malfunctioning,Duplicate entry - verify
+INT003,2023-01-02 17:15:00,Red,46,11,Active,
+INT004,2023-01-02 17:20:00,Green,28,18,Inactive,Unusual traffic pattern due to detour
+INT004,2023-01-02 17:25:00,Green,27,8,Active,Ignore this row for analysis
+INT001,2023-01-02 17:30:00,Yellow,13,10,Malfunctioning,"Camera offline, data may be inaccurate"
+INT001,2023-01-02 17:35:00,Yellow,35,11,Active,
+INT003,2023-01-02 17:40:00,Green,37,14,Inactive,Pedestrian count unusually high due to event
+INT004,2023-01-02 17:45:00,Green,31,12,Malfunctioning,
+INT003,2023-01-02 17:50:00,Green,27,11,Inactive,
+INT004,2023-01-02 17:55:00,Green,26,1,Malfunctioning,
+INT001,2023-01-02 18:00:00,Yellow,48,17,Malfunctioning,
+INT001,2023-01-02 18:05:00,Yellow,45,4,Malfunctioning,"Signal stuck on red, vehicle count unreliable"
+INT002,2023-01-02 18:10:00,Red,5,17,Active,
+INT002,2023-01-02 18:15:00,Green,26,13,Inactive,
+INT002,2023-01-02 18:20:00,Red,49,11,Inactive,Data corrupted - exclude
+INT004,2023-01-02 18:25:00,Yellow,47,3,Active,Ignore this row for analysis
+INT003,2023-01-02 18:30:00,Yellow,26,9,Malfunctioning,
+INT002,2023-01-02 18:35:00,Green,30,9,Inactive,Manual override in effect
+INT002,2023-01-02 18:40:00,Red,48,17,Malfunctioning,Duplicate entry - verify
+INT003,2023-01-02 18:45:00,Red,39,3,Active,
+INT004,2023-01-02 18:50:00,Yellow,37,13,Malfunctioning,"Signal stuck on red, vehicle count unreliable"
+INT003,2023-01-02 18:55:00,Red,20,7,Malfunctioning,Manual override in effect
+INT004,2023-01-02 19:00:00,Yellow,21,18,Active,
+INT001,2023-01-02 19:05:00,Green,13,16,Active,Check timestamp anomaly
+INT001,2023-01-02 19:10:00,Yellow,33,20,Active,Duplicate entry - verify
+INT003,2023-01-02 19:15:00,Yellow,23,14,Active,Pedestrian count unusually high due to event
+INT001,2023-01-02 19:20:00,Yellow,30,14,Active,"Signal stuck on red, vehicle count unreliable"
+INT001,2023-01-02 19:25:00,Yellow,19,18,Malfunctioning,
+INT001,2023-01-02 19:30:00,Yellow,47,8,Malfunctioning,
+INT004,2023-01-02 19:35:00,Green,10,4,Inactive,
+INT001,2023-01-02 19:40:00,Red,44,4,Inactive,Pedestrian count unusually high due to event
+INT002,2023-01-02 19:45:00,Green,32,15,Active,
+INT002,2023-01-02 19:50:00,Red,34,13,Active,"Camera offline, data may be inaccurate"
+INT002,2023-01-02 19:55:00,Red,9,12,Active,
+INT001,2023-01-02 20:00:00,Yellow,36,2,Inactive,"Camera offline, data may be inaccurate"
+INT003,2023-01-02 20:05:00,Yellow,31,1,Inactive,
+INT003,2023-01-02 20:10:00,Green,40,2,Malfunctioning,
+INT001,2023-01-02 20:15:00,Green,47,10,Malfunctioning,Unusual traffic pattern due to detour
+INT004,2023-01-02 20:20:00,Yellow,49,11,Active,
+INT003,2023-01-02 20:25:00,Green,31,1,Inactive,Pedestrian count unusually high due to event
+INT002,2023-01-02 20:30:00,Green,33,15,Inactive,Manual override in effect
+INT004,2023-01-02 20:35:00,Yellow,43,4,Malfunctioning,Ignore this row for analysis
+INT002,2023-01-02 20:40:00,Yellow,23,2,Malfunctioning,
+INT004,2023-01-02 20:45:00,Green,6,16,Inactive,Ignore this row for analysis
+INT002,2023-01-02 20:50:00,Green,4,9,Malfunctioning,Manual override in effect
+INT004,2023-01-02 20:55:00,Green,33,1,Malfunctioning,
+INT002,2023-01-02 21:00:00,Red,50,4,Active,
+INT003,2023-01-02 21:05:00,Green,47,17,Malfunctioning,
+INT004,2023-01-02 21:10:00,Green,31,2,Active,
+INT001,2023-01-02 21:15:00,Green,6,5,Inactive,"Camera offline, data may be inaccurate"
+INT002,2023-01-02 21:20:00,Green,25,14,Inactive,
+INT002,2023-01-02 21:25:00,Red,37,9,Inactive,Sensor glitch detected
+INT003,2023-01-02 21:30:00,Green,29,11,Malfunctioning,
+INT002,2023-01-02 21:35:00,Red,23,0,Active,
+INT001,2023-01-02 21:40:00,Yellow,20,0,Inactive,
+INT001,2023-01-02 21:45:00,Red,1,16,Active,Unusual traffic pattern due to detour
+INT003,2023-01-02 21:50:00,Yellow,24,17,Malfunctioning,Data corrupted - exclude
+INT002,2023-01-02 21:55:00,Red,10,20,Inactive,
+INT004,2023-01-02 22:00:00,Green,1,18,Inactive,
+INT004,2023-01-02 22:05:00,Red,26,5,Malfunctioning,
+INT002,2023-01-02 22:10:00,Green,27,6,Active,
+INT004,2023-01-02 22:15:00,Yellow,27,16,Inactive,
+INT004,2023-01-02 22:20:00,Green,47,15,Inactive,Unusual traffic pattern due to detour
+INT004,2023-01-02 22:25:00,Green,50,12,Inactive,
+INT003,2023-01-02 22:30:00,Yellow,45,13,Inactive,Duplicate entry - verify
+INT001,2023-01-02 22:35:00,Green,46,15,Inactive,
+INT001,2023-01-02 22:40:00,Green,32,1,Malfunctioning,
+INT004,2023-01-02 22:45:00,Red,49,14,Inactive,
+INT003,2023-01-02 22:50:00,Yellow,24,15,Inactive,
+INT004,2023-01-02 22:55:00,Green,46,14,Malfunctioning,
+INT003,2023-01-02 23:00:00,Green,29,4,Inactive,
+INT004,2023-01-02 23:05:00,Yellow,43,13,Malfunctioning,
+INT001,2023-01-02 23:10:00,Red,29,12,Active,Pedestrian count unusually high due to event
+INT001,2023-01-02 23:15:00,Yellow,28,11,Active,
+INT003,2023-01-02 23:20:00,Green,26,14,Malfunctioning,
+INT003,2023-01-02 23:25:00,Red,3,17,Malfunctioning,Sensor glitch detected
+INT001,2023-01-02 23:30:00,Yellow,10,6,Active,Duplicate entry - verify
+INT002,2023-01-02 23:35:00,Red,45,7,Malfunctioning,"Signal stuck on red, vehicle count unreliable"
